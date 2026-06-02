@@ -1,0 +1,41 @@
+/*
+ * Popup enter/exit transitions, applied by react-transition-group (CSSTransition).
+ * Durations match POPUP_DELAY (300ms) in @constants.
+ */
+
+.overlayEnter,
+.contentEnter {
+  opacity: 0;
+}
+
+.overlayEnterActive {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.overlayExit {
+  opacity: 1;
+}
+
+.overlayExitActive {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.contentEnterActive {
+  opacity: 1;
+  transition:
+    opacity 300ms ease-in-out,
+    transform 300ms ease-in-out;
+}
+
+.contentExit {
+  opacity: 1;
+}
+
+.contentExitActive {
+  opacity: 0;
+  transition:
+    opacity 300ms ease-in-out,
+    transform 300ms ease-in-out;
+}

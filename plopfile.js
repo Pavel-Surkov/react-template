@@ -16,11 +16,6 @@ export default function (plop) {
       },
       {
         type: 'confirm',
-        name: 'isStyles',
-        message: 'Do you want add styles?',
-      },
-      {
-        type: 'confirm',
         name: 'isTypes',
         message: 'Do you want add types?',
       },
@@ -32,14 +27,6 @@ export default function (plop) {
         path: `${FOLDER_PATH}/{{kebabCase name}}/{{kebabCase name}}.tsx`,
         templateFile: 'plop-templates/component.js.hbs',
       })
-
-      if (data.isStyles) {
-        actions.push({
-          type: 'add',
-          path: `${FOLDER_PATH}/{{kebabCase name}}/{{kebabCase name}}.styled.ts`,
-          templateFile: 'plop-templates/styled.js.hbs',
-        })
-      }
 
       if (data.isTypes) {
         actions.push({
