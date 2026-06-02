@@ -1,9 +1,11 @@
 import { FC } from 'react'
 
-import { MainPageStyled } from './main-page.styled'
-
 export const MainPage: FC = () => {
-  return <MainPageStyled></MainPageStyled>
+  return (
+    <div className="relative h-(--full-height) flex items-center justify-center">
+      <p>Hola, world!</p>
+    </div>
+  )
 }
 
 export default MainPage
