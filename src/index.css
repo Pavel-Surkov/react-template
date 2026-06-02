@@ -75,13 +75,14 @@
 @layer base {
   html {
     height: 100%;
+    /* Defines the rem unit (≈1px at the design width); scales fluidly via vw. */
+    font-size: 0.052vw;
   }
 
   html,
   body {
     font-family: var(--font-ibm-mono);
     font-weight: 400;
-    font-size: 0.052vw;
     position: relative;
     background-color: var(--color-black);
     overflow: hidden;
@@ -91,6 +92,9 @@
     max-width: 100vw;
     height: 100%;
     color: var(--color-white);
+    /* Base text size for the whole app: 16rem ≈ 16px, scaling with the rem unit.
+       Set on <body> (not #root) so portaled #popups text inherits it too. */
+    font-size: 16rem;
   }
 
   #root {
@@ -103,9 +107,12 @@
   }
 
   @media screen and (max-width: 999px) {
+    /* Only the rem unit changes on mobile; body stays 16rem and scales with it. */
+    html {
+      font-size: 0.3125vw;
+    }
     html,
     body {
-      font-size: 0.3125vw;
       overflow: auto;
     }
     body {
