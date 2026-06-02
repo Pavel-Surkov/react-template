@@ -1,0 +1,19 @@
+import { FC } from 'react'
+{{#if isTypes}}import { {{pascalCase name}}Props } from './types'{{/if}}
+{{#if isStyles}}import { {{pascalCase name}}Styled } from './{{kebabCase name}}.styled'{{/if}}
+
+export const {{pascalCase name}}: FC{{#if isTypes}}<{{pascalCase name}}Props>{{/if}} = () => {
+  return (
+    {{#if isStyles}}
+    <{{pascalCase name}}Styled>
+      {{pascalCase name}}
+    </{{pascalCase name}}Styled>
+    {{else}}
+    <div>
+      {{pascalCase name}}
+    </div>
+    {{/if}}
+  );
+};
+
+export default {{pascalCase name}}
