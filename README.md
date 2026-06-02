@@ -1,4 +1,4 @@
-# Quantum Career Predictor
+# React + Vite + TypeScript Starter — Tailwind CSS v4
 
 A single-page web application built with **React 19**, **Vite 8**, and **TypeScript**,
 styled with **Tailwind CSS v4** (CSS-first, no `tailwind.config.js`). Its defining feature
@@ -23,15 +23,15 @@ is a **fluid, rem-based design system**: every size is authored in `rem` as if i
 
 ## Tech stack
 
-| Area       | Package                                 |
-| ---------- | --------------------------------------- |
-| Framework  | React 19                                |
+| Area | Package |
+| --- | --- |
+| Framework | React 19 |
 | Build tool | Vite 8 (HTTPS dev server via basic-ssl) |
-| Language   | TypeScript (strict)                     |
-| Styling    | Tailwind CSS v4 (`@tailwindcss/vite`)   |
-| State      | Zustand                                 |
-| Animations | react-transition-group                  |
-| Tooling    | pnpm, ESLint, Prettier, husky, plop     |
+| Language | TypeScript (strict) |
+| Styling | Tailwind CSS v4 (`@tailwindcss/vite`) |
+| State | Zustand |
+| Animations | react-transition-group |
+| Tooling | pnpm, ESLint, Prettier, husky, plop |
 
 ## Getting started
 
@@ -53,15 +53,15 @@ pnpm dev        # https://localhost:5173 (self-signed cert)
 
 ## Scripts
 
-| Command           | Description                                 |
-| ----------------- | ------------------------------------------- |
-| `pnpm dev`        | Start the Vite dev server (HTTPS, `--host`) |
-| `pnpm build`      | Type-check (`tsc`) and build to `dist/`     |
-| `pnpm preview`    | Serve the production build locally          |
-| `pnpm generate`   | Scaffold a new component via plop           |
-| `pnpm lint`       | Run ESLint with `--fix`                     |
-| `pnpm lint:check` | Run ESLint without fixing (CI/verify)       |
-| `pnpm prettier`   | Format `src` with Prettier                  |
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Start the Vite dev server (HTTPS, `--host`) |
+| `pnpm build` | Type-check (`tsc`) and build to `dist/` |
+| `pnpm preview` | Serve the production build locally |
+| `pnpm generate` | Scaffold a new component via plop |
+| `pnpm lint` | Run ESLint with `--fix` |
+| `pnpm lint:check` | Run ESLint without fixing (CI/verify) |
+| `pnpm prettier` | Format `src` with Prettier |
 
 > [!NOTE]
 > There is no test runner configured. A husky pre-commit hook runs ESLint + Prettier on
@@ -88,13 +88,13 @@ src/
 Each domain folder exposes an `index.ts` barrel and a `@alias` (configured in
 `tsconfig.json`). Always import from the alias, never a deep path.
 
-| Adding a…             | Where                            | How to wire it                                              |
-| --------------------- | -------------------------------- | ----------------------------------------------------------- | -------------- | --------------------------------- |
-| Component / UI / page | `src/components                  | ui-kit                                                      | pages/<name>/` | `pnpm generate` → pick the folder |
-| Hook                  | `src/hooks/use-<name>.ts`        | export from `src/hooks/index.ts`                            |
-| Store                 | `src/stores/use-<name>.ts`       | export from `src/stores/index.ts`                           |
-| Provider              | `src/providers/<name>-provider/` | export from `providers/index.ts` **and** mount in `app.tsx` |
-| Design token          | `@theme` in `src/index.css`      | use the generated utility (`bg-*`, `font-*`, …)             |
+| Adding a… | Where | How to wire it |
+| --- | --- | --- |
+| Component / UI / page | `src/{components,ui-kit,pages}/<name>/` | `pnpm generate` → pick the folder |
+| Hook | `src/hooks/use-<name>.ts` | export from `src/hooks/index.ts` |
+| Store | `src/stores/use-<name>.ts` | export from `src/stores/index.ts` |
+| Provider | `src/providers/<name>-provider/` | export from `providers/index.ts` **and** mount in `app.tsx` |
+| Design token | `@theme` in `src/index.css` | use the generated utility (`bg-*`, `font-*`, …) |
 
 ## Styling system
 
@@ -113,7 +113,6 @@ scales fluidly with the viewport.** Configured in `src/index.css`.
 
   Keep breakpoints in `px`, not `rem`. `Breakpoints.DESKTOP` in `src/tokens` mirrors this
   value for JS use (`use-device.ts`) and must stay in sync.
-
 - Style with utility classes; merge/conditionally join them with the **`cn(...)`** helper
   from `@utils`.
 
