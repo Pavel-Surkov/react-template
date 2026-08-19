@@ -24,7 +24,6 @@
     "baseUrl": "src",
     "paths": {
       "@providers": ["./providers/index"],
-      "@api": ["./api/generated/index"],
       "@ui-kit": ["./ui-kit/index"],
       "@stores": ["./stores/index"],
       "@pages": ["./pages/index"],
