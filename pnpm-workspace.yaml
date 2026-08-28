@@ -1,4 +1,5 @@
 allowBuilds:
   core-js: false
 overrides:
-  postcss@<8.5.10: '>=8.5.10'
+  js-yaml@<4.3.1: '>=4.3.1'
+  postcss@<8.5.23: '>=8.5.23'
