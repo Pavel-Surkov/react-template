@@ -36,8 +36,8 @@ proportionally with the viewport.
 
 ### Prerequisites
 
-- **Node.js** 18+
-- **pnpm** (`npm i -g pnpm`)
+- **Node.js** 22.22.1+
+- **pnpm 11.24.0** (`npm i -g pnpm@11.24.0`)
 
 ### Install & run
 
