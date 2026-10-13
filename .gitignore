@@ -26,3 +26,6 @@ dist-ssr
 *.sw?
 
 instructions
+
+# Local markdown issue tracker
+.scratch
